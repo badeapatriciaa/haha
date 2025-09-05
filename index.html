@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
-<title>Carte SCOPA - GitHub Pages</title>
+<title>Carte SCOPA - Rotire automată</title>
 <style>
    body {
      display: flex;
@@ -56,12 +56,18 @@
 </head>
 <body>
 <div class="card-container">
-<div class="card" onclick="this.classList.toggle('is-flipped')">
+<div class="card" id="autoCard">
 <div class="card-face card-front">SCOPA</div>
 <div class="card-face card-back">
-<img src="image.jpg" alt="Poză carte SCOPA">
+<img src="image.jpeg" alt="Poză carte SCOPA">
 </div>
 </div>
 </div>
+<script>
+   const card = document.getElementById('autoCard');
+   setInterval(() => {
+     card.classList.toggle('is-flipped');
+   }, 2000);
+</script>
 </body>
 </html>
